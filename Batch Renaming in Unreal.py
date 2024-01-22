@@ -22,7 +22,7 @@ def rename_assets(search_pattern, replace_pattern, use_case):
 
         unreal.log(asset_name)
 
-        # check if the asset name ontains the to be replaced text. 
+        # check if the asset name contains the to be replaced text. 
         if string_lib.contains(asset_name, search_pattern, use_case=use_case):
             
             search_case = unreal.SearchCase.CASE_SENSITIVE if use_case else unreal.SearchCase.IGNORE_CASE
@@ -32,7 +32,7 @@ def rename_assets(search_pattern, replace_pattern, use_case):
             replaced += 1
             unreal.log("Replaced {} with {}".format(asset_name, replaced_name))
         else:
-            unreal.log("{} did not match the search patten, was skipped.".format(asset_name))
+            unreal.log("{} did not match the search pattern, was skipped.".format(asset_name))
 
     unreal.log("Replaced {} of {} assets".format(replaced, num_assets))
 
