@@ -1,7 +1,6 @@
 ##  Power of Two Validator - Python  ##
 
-# This is important because textures need to be a power of two in order to work, if they aren't it can really
-# mess up your system
+# Textures need to be a power of two in order to work, and if they aren't, it can really mess up your system
 
 import unreal
 import math
