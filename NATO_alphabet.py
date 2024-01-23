@@ -12,9 +12,7 @@ nato_alphabet_dict = {row.letter: row.code for (index, row) in data.iterrows()}
 another_word = True
 while another_word:
     word = input("Enter a word:  ").upper()
-    # Angela Yu did this: v less code v
-    # nato_words = [nato_alphabet_dict[letter] for letter in word]
-    nato_words = [nato_alphabet_dict.get(letter) for letter in word if letter in nato_alphabet_dict.keys()]
+    nato_words = [nato_alphabet_dict[letter] for letter in word]
     print(nato_words)
 
     if input("Enter another word? 'Y' or 'N'  ").lower() == 'n':
