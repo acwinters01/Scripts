@@ -49,12 +49,4 @@ while game_is_on:
         score.l_point()
 
 
-# 1. Create the screen x
-# 2. Create and move a paddle x
-# 3. Create another paddle
-# 4. Create the ball and make it move
-# 5. Detect collision with wall an bounce
-# 6. Detect collision with paddle
-# 7. Keep Score
-
 screen.exitonclick()
