@@ -12,7 +12,7 @@ num_assets = len(selected_assets)
 assets_cleaned = 0
 
 # specific path
-path_dir = "\\BasePath"
+path_dir = "/Game"
 
 if num_assets > 0:
     # this gives full path for the provided asset
@@ -28,7 +28,9 @@ for asset in selected_assets:
 
     # Creating a new path and moving assets
     try:
-        new_path = os.path.join(path_dir, class_name, asset_name)
+        # Considers files with spaces in the name
+        new_asset_name = asset_name.replace(" ", "_").replace(".", "_")
+        new_path = os.path.join(path_dir, class_name, new_asset_name)
         editor_asset_lib.rename_loaded_asset(asset_name, new_path)
         assets_cleaned += 1
         unreal.log("Cleaned {} and sent to {}".format(asset, new_path))
